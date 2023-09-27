@@ -1,0 +1,19 @@
+{
+    "CreateLinks": [],
+    "OnFailure": "/ReporteDiarioMDK/Actions/CreateEntityFailureMessage.action",
+    "OnSuccess": "/ReporteDiarioMDK/Actions/CreateEntitySuccessMessage.action",
+    "Properties": {
+        "zona": "#Control:zona/#Value",
+        "rol": "#Control:rol/#Value",
+        "descripcion": "#Control:descripcion/#Value",
+        "vigente": "#Control:vigente/#Value"
+    },
+    "Target": {
+        "EntitySet": "Predio",
+        "Service": "/ReporteDiarioMDK/Services/ReporteDiarioMDK.service"
+    },
+    "ActionResult": {
+        "_Name": "create"
+    },
+    "_Type": "Action.Type.ODataService.CreateEntity"
+}

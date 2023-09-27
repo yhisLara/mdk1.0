@@ -1,0 +1,52 @@
+{
+	"Caption": "Update LineaFaena Detail",
+	"DesignTimeTarget": {
+		"Service": "/ReporteDiarioMDK/Services/ReporteDiarioMDK.service",
+		"EntitySet": "LineaFaena",
+		"QueryOptions": ""
+	},
+	"ActionBar": {
+		"Items": [
+			{
+				"Position": "Left",
+				"SystemItem": "Cancel",
+				"OnPress": "/ReporteDiarioMDK/Actions/CloseModalPage_Cancel.action"
+			},
+			{
+				"Position": "Right",
+				"SystemItem": "Save",
+				"OnPress": "/ReporteDiarioMDK/Actions/LineaFaena/LineaFaena_UpdateEntity.action"
+			}
+		]
+	},
+	"Controls": [
+		{
+			"Sections": [
+				{
+					"_Type": "Section.Type.FormCell",
+					"_Name": "SectionFormCell0",
+					"Visible": true,
+					"Controls": [
+						{
+							"Caption": "codigo",
+							"_Name": "codigo",
+							"Value": "{codigo}",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "descripcion",
+							"_Name": "descripcion",
+							"Value": "{descripcion}",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						}
+					]
+				}
+			],
+			"_Name": "SectionedTable0",
+			"_Type": "Control.Type.SectionedTable"
+		}
+	],
+	"_Type": "Page",
+	"_Name": "LineaFaena_Edit",
+	"PrefersLargeCaption": true
+}

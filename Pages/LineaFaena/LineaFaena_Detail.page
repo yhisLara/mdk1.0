@@ -1,0 +1,84 @@
+{
+	"Caption": "LineaFaena Detail",
+	"DesignTimeTarget": {
+		"Service": "/ReporteDiarioMDK/Services/ReporteDiarioMDK.service",
+		"EntitySet": "LineaFaena",
+		"QueryOptions": ""
+	},
+	"ActionBar": {
+		"Items": [
+			{
+				"OnPress": "/ReporteDiarioMDK/Actions/LineaFaena/NavToLineaFaena_Edit.action",
+				"Position": "Right",
+				"SystemItem": "Edit"
+			},
+			{
+				"OnPress": "/ReporteDiarioMDK/Rules/LineaFaena/LineaFaena_DeleteConfirmation.js",
+				"Position": "Right",
+				"SystemItem": "Trash"
+			}
+		]
+	},
+	"Controls": [
+		{
+			"Sections": [
+				{
+					"ObjectHeader": {
+						"Tags": [],
+						"DetailImage": "",
+						"HeadlineText": "{ID}",
+						"Subhead": "{createdAt}",
+						"BodyText": "",
+						"Footnote": "{modifiedAt}",
+						"Description": "{createdBy}",
+						"StatusText": "{modifiedBy}",
+						"StatusImage": "",
+						"SubstatusImage": "",
+						"SubstatusText": "{codigo}"
+					},
+					"_Type": "Section.Type.ObjectHeader"
+				},
+				{
+					"KeyAndValues": [
+						{
+							"KeyName": "Created On",
+							"Value": "{createdAt}"
+						},
+						{
+							"KeyName": "Created By",
+							"Value": "{createdBy}"
+						},
+						{
+							"KeyName": "Changed On",
+							"Value": "{modifiedAt}"
+						},
+						{
+							"KeyName": "Changed By",
+							"Value": "{modifiedBy}"
+						},
+						{
+							"KeyName": "codigo",
+							"Value": "{codigo}"
+						},
+						{
+							"KeyName": "descripcion",
+							"Value": "{descripcion}"
+						}
+					],
+					"Layout": {
+						"NumberOfColumns": 2
+					},
+					"MaxItemCount": 1,
+					"_Name": "SectionKeyValue0",
+					"_Type": "Section.Type.KeyValue"
+				}
+			],
+			"DataSubscriptions": [],
+			"_Type": "Control.Type.SectionedTable",
+			"_Name": "SectionedTable"
+		}
+	],
+	"_Type": "Page",
+	"_Name": "LineaFaena_Detail",
+	"PrefersLargeCaption": true
+}

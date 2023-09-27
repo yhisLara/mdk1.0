@@ -1,0 +1,8 @@
+{
+    "Message": "Upload in progress...",
+    "CompletionMessage": "Sync completed",
+    "CompletionTimeout": 7,
+    "OnSuccess": "/ReporteDiarioMDK/Actions/Service/UploadOffline.action",
+    "OnFailure": "/ReporteDiarioMDK/Actions/Service/SyncFailureMessage.action",
+    "_Type": "Action.Type.ProgressBanner"
+}

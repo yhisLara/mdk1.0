@@ -1,0 +1,6 @@
+{
+    "ModalPageFullscreen": false,
+    "ModalPage": true,
+    "PageToOpen": "/ReporteDiarioMDK/Pages/Predio/Predio_Edit.page",
+    "_Type": "Action.Type.Navigation"
+}

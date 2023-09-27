@@ -1,0 +1,6 @@
+{
+    "ModalPageFullscreen": false,
+    "ModalPage": true,
+    "PageToOpen": "/ReporteDiarioMDK/Pages/Parametro/Parametro_Edit.page",
+    "_Type": "Action.Type.Navigation"
+}

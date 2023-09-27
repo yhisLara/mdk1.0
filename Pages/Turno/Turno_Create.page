@@ -1,0 +1,56 @@
+{
+	"ActionBar": {
+		"Items": [
+			{
+				"OnPress": "/ReporteDiarioMDK/Actions/CloseModalPage_Cancel.action",
+				"Position": "Left",
+				"SystemItem": "Cancel"
+			},
+			{
+				"OnPress": "/ReporteDiarioMDK/Actions/Turno/Turno_CreateEntity.action",
+				"Position": "Right",
+				"SystemItem": "Save"
+			}
+		]
+	},
+	"Caption": "Create Turno Detail",
+	"Controls": [
+		{
+			"Sections": [
+				{
+					"_Type": "Section.Type.FormCell",
+					"_Name": "SectionFormCell0",
+					"Visible": true,
+					"Controls": [
+						{
+							"Caption": "descripcion",
+							"_Name": "descripcion",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "hora_inicial",
+							"_Name": "hora_inicial",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "hora_fin",
+							"_Name": "hora_fin",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"_Name": "vigente",
+							"Caption": "vigente",
+							"Value": false,
+							"_Type": "Control.Type.FormCell.Switch"
+						}
+					]
+				}
+			],
+			"_Name": "SectionedTable0",
+			"_Type": "Control.Type.SectionedTable"
+		}
+	],
+	"_Type": "Page",
+	"_Name": "Turno_Create",
+	"PrefersLargeCaption": true
+}

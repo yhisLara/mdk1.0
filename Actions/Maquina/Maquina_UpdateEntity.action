@@ -1,0 +1,21 @@
+{
+    "_Type": "Action.Type.ODataService.UpdateEntity",
+    "Target": {
+        "EntitySet": "Maquina",
+        "Service": "/ReporteDiarioMDK/Services/ReporteDiarioMDK.service",
+        "ReadLink": "{@odata.readLink}"
+    },
+    "Properties": {
+        "proceso": "#Control:proceso/#Value",
+        "tipo": "#Control:tipo/#Value",
+        "equipo": "#Control:equipo/#Value",
+        "cod_modelo": "#Control:cod_modelo/#Value",
+        "descripcion": "#Control:descripcion/#Value"
+    },
+    "UpdateLinks": [],
+    "ActionResult": {
+        "_Name": "update"
+    },
+    "OnSuccess": "/ReporteDiarioMDK/Actions/UpdateEntitySuccessMessage.action",
+    "OnFailure": "/ReporteDiarioMDK/Actions/UpdateEntityFailureMessage.action"
+}

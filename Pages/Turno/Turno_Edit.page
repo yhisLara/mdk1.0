@@ -1,0 +1,64 @@
+{
+	"Caption": "Update Turno Detail",
+	"DesignTimeTarget": {
+		"Service": "/ReporteDiarioMDK/Services/ReporteDiarioMDK.service",
+		"EntitySet": "Turno",
+		"QueryOptions": ""
+	},
+	"ActionBar": {
+		"Items": [
+			{
+				"Position": "Left",
+				"SystemItem": "Cancel",
+				"OnPress": "/ReporteDiarioMDK/Actions/CloseModalPage_Cancel.action"
+			},
+			{
+				"Position": "Right",
+				"SystemItem": "Save",
+				"OnPress": "/ReporteDiarioMDK/Actions/Turno/Turno_UpdateEntity.action"
+			}
+		]
+	},
+	"Controls": [
+		{
+			"Sections": [
+				{
+					"_Type": "Section.Type.FormCell",
+					"_Name": "SectionFormCell0",
+					"Visible": true,
+					"Controls": [
+						{
+							"Caption": "descripcion",
+							"_Name": "descripcion",
+							"Value": "{descripcion}",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "hora_inicial",
+							"_Name": "hora_inicial",
+							"Value": "{hora_inicial}",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "hora_fin",
+							"_Name": "hora_fin",
+							"Value": "{hora_fin}",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"_Name": "vigente",
+							"Caption": "vigente",
+							"Value": "{vigente}",
+							"_Type": "Control.Type.FormCell.Switch"
+						}
+					]
+				}
+			],
+			"_Name": "SectionedTable0",
+			"_Type": "Control.Type.SectionedTable"
+		}
+	],
+	"_Type": "Page",
+	"_Name": "Turno_Edit",
+	"PrefersLargeCaption": true
+}

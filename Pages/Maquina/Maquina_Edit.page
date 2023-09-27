@@ -1,0 +1,70 @@
+{
+	"Caption": "Update Maquina Detail",
+	"DesignTimeTarget": {
+		"Service": "/ReporteDiarioMDK/Services/ReporteDiarioMDK.service",
+		"EntitySet": "Maquina",
+		"QueryOptions": ""
+	},
+	"ActionBar": {
+		"Items": [
+			{
+				"Position": "Left",
+				"SystemItem": "Cancel",
+				"OnPress": "/ReporteDiarioMDK/Actions/CloseModalPage_Cancel.action"
+			},
+			{
+				"Position": "Right",
+				"SystemItem": "Save",
+				"OnPress": "/ReporteDiarioMDK/Actions/Maquina/Maquina_UpdateEntity.action"
+			}
+		]
+	},
+	"Controls": [
+		{
+			"Sections": [
+				{
+					"_Type": "Section.Type.FormCell",
+					"_Name": "SectionFormCell0",
+					"Visible": true,
+					"Controls": [
+						{
+							"Caption": "proceso",
+							"_Name": "proceso",
+							"Value": "{proceso}",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "tipo",
+							"_Name": "tipo",
+							"Value": "{tipo}",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "equipo",
+							"_Name": "equipo",
+							"Value": "{equipo}",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "cod_modelo",
+							"_Name": "cod_modelo",
+							"Value": "{cod_modelo}",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "descripcion",
+							"_Name": "descripcion",
+							"Value": "{descripcion}",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						}
+					]
+				}
+			],
+			"_Name": "SectionedTable0",
+			"_Type": "Control.Type.SectionedTable"
+		}
+	],
+	"_Type": "Page",
+	"_Name": "Maquina_Edit",
+	"PrefersLargeCaption": true
+}

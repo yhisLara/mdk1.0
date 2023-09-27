@@ -1,0 +1,19 @@
+{
+    "CreateLinks": [],
+    "OnFailure": "/ReporteDiarioMDK/Actions/CreateEntityFailureMessage.action",
+    "OnSuccess": "/ReporteDiarioMDK/Actions/CreateEntitySuccessMessage.action",
+    "Properties": {
+        "descripcion": "#Control:descripcion/#Value",
+        "hora_inicial": "#Control:hora_inicial/#Value",
+        "hora_fin": "#Control:hora_fin/#Value",
+        "vigente": "#Control:vigente/#Value"
+    },
+    "Target": {
+        "EntitySet": "Turno",
+        "Service": "/ReporteDiarioMDK/Services/ReporteDiarioMDK.service"
+    },
+    "ActionResult": {
+        "_Name": "create"
+    },
+    "_Type": "Action.Type.ODataService.CreateEntity"
+}

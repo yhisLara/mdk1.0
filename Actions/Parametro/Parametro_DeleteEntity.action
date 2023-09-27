@@ -1,0 +1,13 @@
+{
+    "Target": {
+        "EntitySet": "Parametro",
+        "Service": "/ReporteDiarioMDK/Services/ReporteDiarioMDK.service",
+        "ReadLink": "{@odata.readLink}"
+    },
+    "OnSuccess": "/ReporteDiarioMDK/Actions/DeleteEntitySuccessMessage.action",
+    "OnFailure": "/ReporteDiarioMDK/Actions/DeleteEntityFailureMessage.action",
+    "ActionResult": {
+        "_Name": "delete"
+    },
+    "_Type": "Action.Type.ODataService.DeleteEntity"
+}

@@ -1,0 +1,96 @@
+{
+	"Caption": "Maquina Detail",
+	"DesignTimeTarget": {
+		"Service": "/ReporteDiarioMDK/Services/ReporteDiarioMDK.service",
+		"EntitySet": "Maquina",
+		"QueryOptions": ""
+	},
+	"ActionBar": {
+		"Items": [
+			{
+				"OnPress": "/ReporteDiarioMDK/Actions/Maquina/NavToMaquina_Edit.action",
+				"Position": "Right",
+				"SystemItem": "Edit"
+			},
+			{
+				"OnPress": "/ReporteDiarioMDK/Rules/Maquina/Maquina_DeleteConfirmation.js",
+				"Position": "Right",
+				"SystemItem": "Trash"
+			}
+		]
+	},
+	"Controls": [
+		{
+			"Sections": [
+				{
+					"ObjectHeader": {
+						"Tags": [],
+						"DetailImage": "",
+						"HeadlineText": "{ID}",
+						"Subhead": "{createdAt}",
+						"BodyText": "",
+						"Footnote": "{modifiedAt}",
+						"Description": "{createdBy}",
+						"StatusText": "{modifiedBy}",
+						"StatusImage": "",
+						"SubstatusImage": "",
+						"SubstatusText": "{proceso}"
+					},
+					"_Type": "Section.Type.ObjectHeader"
+				},
+				{
+					"KeyAndValues": [
+						{
+							"KeyName": "Created On",
+							"Value": "{createdAt}"
+						},
+						{
+							"KeyName": "Created By",
+							"Value": "{createdBy}"
+						},
+						{
+							"KeyName": "Changed On",
+							"Value": "{modifiedAt}"
+						},
+						{
+							"KeyName": "Changed By",
+							"Value": "{modifiedBy}"
+						},
+						{
+							"KeyName": "proceso",
+							"Value": "{proceso}"
+						},
+						{
+							"KeyName": "tipo",
+							"Value": "{tipo}"
+						},
+						{
+							"KeyName": "equipo",
+							"Value": "{equipo}"
+						},
+						{
+							"KeyName": "cod_modelo",
+							"Value": "{cod_modelo}"
+						},
+						{
+							"KeyName": "descripcion",
+							"Value": "{descripcion}"
+						}
+					],
+					"Layout": {
+						"NumberOfColumns": 2
+					},
+					"MaxItemCount": 1,
+					"_Name": "SectionKeyValue0",
+					"_Type": "Section.Type.KeyValue"
+				}
+			],
+			"DataSubscriptions": [],
+			"_Type": "Control.Type.SectionedTable",
+			"_Name": "SectionedTable"
+		}
+	],
+	"_Type": "Page",
+	"_Name": "Maquina_Detail",
+	"PrefersLargeCaption": true
+}

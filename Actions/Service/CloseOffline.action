@@ -1,0 +1,10 @@
+{
+    "_Type": "Action.Type.OfflineOData.Close",
+    "Service": "/ReporteDiarioMDK/Services/ReporteDiarioMDK.service",
+    "Force": true,
+    "ActionResult": {
+        "_Name": "close"
+    },
+    "OnSuccess": "/ReporteDiarioMDK/Actions/Service/CloseOfflineSuccessMessage.action",
+    "OnFailure": "/ReporteDiarioMDK/Actions/Service/CloseOfflineFailureMessage.action"
+}

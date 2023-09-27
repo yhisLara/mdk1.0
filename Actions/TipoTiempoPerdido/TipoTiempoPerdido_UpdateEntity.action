@@ -1,0 +1,20 @@
+{
+    "_Type": "Action.Type.ODataService.UpdateEntity",
+    "Target": {
+        "EntitySet": "TipoTiempoPerdido",
+        "Service": "/ReporteDiarioMDK/Services/ReporteDiarioMDK.service",
+        "ReadLink": "{@odata.readLink}"
+    },
+    "Properties": {
+        "codigo": "#Control:codigo/#Value",
+        "proceso": "#Control:proceso/#Value",
+        "descripcion": "#Control:descripcion/#Value",
+        "vigente": "#Control:vigente/#Value"
+    },
+    "UpdateLinks": [],
+    "ActionResult": {
+        "_Name": "update"
+    },
+    "OnSuccess": "/ReporteDiarioMDK/Actions/UpdateEntitySuccessMessage.action",
+    "OnFailure": "/ReporteDiarioMDK/Actions/UpdateEntityFailureMessage.action"
+}

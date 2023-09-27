@@ -1,0 +1,36 @@
+{
+    "Service": "/ReporteDiarioMDK/Services/ReporteDiarioMDK.service",
+    "DefiningRequests": [{
+            "Name": "LineaFaena",
+            "Query": "LineaFaena"
+        },
+        {
+            "Name": "Maquina",
+            "Query": "Maquina"
+        },
+        {
+            "Name": "Parametro",
+            "Query": "Parametro"
+        },
+        {
+            "Name": "Predio",
+            "Query": "Predio"
+        },
+        {
+            "Name": "TipoTiempoPerdido",
+            "Query": "TipoTiempoPerdido"
+        },
+        {
+            "Name": "Turno",
+            "Query": "Turno"
+        }
+    ],
+    "_Type": "Action.Type.ODataService.Initialize",
+    "ShowActivityIndicator": true,
+    "ActivityIndicatorText": "Downloading...",
+    "ActionResult": {
+        "_Name": "init"
+    },
+    "OnSuccess": "/ReporteDiarioMDK/Actions/Service/InitializeOfflineSuccessMessage.action",
+    "OnFailure": "/ReporteDiarioMDK/Actions/Service/InitializeOfflineFailureMessage.action"
+}

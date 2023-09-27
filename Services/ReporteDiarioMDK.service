@@ -1,0 +1,7 @@
+{
+	"DestinationName": "ReporteDiarioMDK",
+	"PathSuffix": "/Mantenedor",
+	"OfflineEnabled": false,
+	"SourceType": "Mobile",
+	"RestService": true
+}

@@ -1,0 +1,8 @@
+{
+    "_Type": "Action.Type.ApplicationUpdate",
+    "ActionResult": {
+        "_Name": "AppUpdate"
+    },
+    "OnFailure": "/ReporteDiarioMDK/Rules/AppUpdateFailure.js",
+    "OnSuccess": "/ReporteDiarioMDK/Rules/AppUpdateSuccess.js"
+}

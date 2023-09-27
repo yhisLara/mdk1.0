@@ -1,0 +1,57 @@
+{
+	"Credential": "cf",
+	"Template": {
+		"Id": "@ext-mdkvsc-npm-dev/generator-mdk",
+		"Name": "CRUD",
+		"Version": "0.0.1"
+	},
+	"CF": {
+		"Target": "https://api.cf.us10-001.hana.ondemand.com",
+		"Organization": "1703aee8-9c54-4949-a249-c07ba511ab82",
+		"Space": "896e96dc-626f-4900-b2bd-3f68391d1cbc",
+		"Deploy": {
+			"Description": "",
+			"WebClient": {
+				"Runtime": "production",
+				"URL": "https://mdk-webclient-runtime.cfapps.us10.hana.ondemand.com/runtime/"
+			},
+			"Destination": [
+				{
+					"CF": "ReporteDiarioMDK",
+					"MDK": "ReporteDiarioMDK",
+					"URL": ""
+				}
+			],
+			"Name": "ns.ReporteDiarioMDK",
+			"Version": "1.0.0",
+			"AppRouter": "standalone",
+			"URL": "https://d5835936trial-reportediario-dev-nsreportediariomdk-approuter.cfapps.us10-001.hana.ondemand.com/nsReporteDiarioMDK"
+		}
+	},
+	"MobileService": {
+		"Type": "standard",
+		"AdminAPI": "https://mobile-service-cockpit-api.cfapps.us10.hana.ondemand.com/cockpit/v1/org/1703aee8-9c54-4949-a249-c07ba511ab82/space/896e96dc-626f-4900-b2bd-3f68391d1cbc",
+		"AppId": "ReporteDiarioMDK",
+		"Destination": [
+			"ReporteDiarioMDK"
+		]
+	},
+	"Onboarding": {
+		"Schema": "sapmobilesvcs",
+		"TimeZone": "UTC",
+		"URL": "sapmobilesvcs://?AppId=ReporteDiarioMDK&ClientId=a84a40a5-ef7d-4f70-b0d8-5e11906bdaea&ServerUrl=https://d5835936trial-reportediario-dev-reportediariomdk.cfapps.us10-001.hana.ondemand.com&SapCloudPlatformEndpoint=https://d5835936trial-reportediario-dev-reportediariomdk.cfapps.us10-001.hana.ondemand.com&AuthorizationEndpointUrl=https://d5835936trial-reportediario-dev-reportediariomdk.cfapps.us10-001.hana.ondemand.com/oauth2/api/v1/authorize&RedirectUrl=https://d5835936trial-reportediario-dev-reportediariomdk.cfapps.us10-001.hana.ondemand.com&TokenUrl=https://d5835936trial-reportediario-dev-reportediariomdk.cfapps.us10-001.hana.ondemand.com/oauth2/api/v1/token&multiUser=false"
+	},
+	"LCAP": {
+		"FullName": "",
+		"Service": [],
+		"sourceTemplate": {
+			"id": "html5moduletemplates.basicSAPUI5ApplicationProjectModule",
+			"version": "1.40.12"
+		}
+	},
+	"Build": {
+		"SourceMap": false,
+		"TSTarget": "es6",
+		"WMF": true
+	}
+}

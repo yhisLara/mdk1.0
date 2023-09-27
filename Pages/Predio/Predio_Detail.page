@@ -1,0 +1,92 @@
+{
+	"Caption": "Predio Detail",
+	"DesignTimeTarget": {
+		"Service": "/ReporteDiarioMDK/Services/ReporteDiarioMDK.service",
+		"EntitySet": "Predio",
+		"QueryOptions": ""
+	},
+	"ActionBar": {
+		"Items": [
+			{
+				"OnPress": "/ReporteDiarioMDK/Actions/Predio/NavToPredio_Edit.action",
+				"Position": "Right",
+				"SystemItem": "Edit"
+			},
+			{
+				"OnPress": "/ReporteDiarioMDK/Rules/Predio/Predio_DeleteConfirmation.js",
+				"Position": "Right",
+				"SystemItem": "Trash"
+			}
+		]
+	},
+	"Controls": [
+		{
+			"Sections": [
+				{
+					"ObjectHeader": {
+						"Tags": [],
+						"DetailImage": "",
+						"HeadlineText": "{ID}",
+						"Subhead": "{createdAt}",
+						"BodyText": "",
+						"Footnote": "{modifiedAt}",
+						"Description": "{createdBy}",
+						"StatusText": "{modifiedBy}",
+						"StatusImage": "",
+						"SubstatusImage": "",
+						"SubstatusText": "{zona}"
+					},
+					"_Type": "Section.Type.ObjectHeader"
+				},
+				{
+					"KeyAndValues": [
+						{
+							"KeyName": "Created On",
+							"Value": "{createdAt}"
+						},
+						{
+							"KeyName": "Created By",
+							"Value": "{createdBy}"
+						},
+						{
+							"KeyName": "Changed On",
+							"Value": "{modifiedAt}"
+						},
+						{
+							"KeyName": "Changed By",
+							"Value": "{modifiedBy}"
+						},
+						{
+							"KeyName": "zona",
+							"Value": "{zona}"
+						},
+						{
+							"KeyName": "rol",
+							"Value": "{rol}"
+						},
+						{
+							"KeyName": "descripcion",
+							"Value": "{descripcion}"
+						},
+						{
+							"KeyName": "vigente",
+							"Value": "{vigente}"
+						}
+					],
+					"Layout": {
+						"NumberOfColumns": 2
+					},
+					"MaxItemCount": 1,
+					"_Name": "SectionKeyValue0",
+					"_Type": "Section.Type.KeyValue"
+				}
+			],
+			"DataSubscriptions": [],
+			"_Type": "Control.Type.SectionedTable",
+			"_Name": "SectionedTable"
+		}
+	],
+	"_Type": "Page",
+	"_Name": "Predio_Detail",
+	"PrefersLargeCaption": true
+}

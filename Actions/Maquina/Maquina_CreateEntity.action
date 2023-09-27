@@ -1,0 +1,20 @@
+{
+    "CreateLinks": [],
+    "OnFailure": "/ReporteDiarioMDK/Actions/CreateEntityFailureMessage.action",
+    "OnSuccess": "/ReporteDiarioMDK/Actions/CreateEntitySuccessMessage.action",
+    "Properties": {
+        "proceso": "#Control:proceso/#Value",
+        "tipo": "#Control:tipo/#Value",
+        "equipo": "#Control:equipo/#Value",
+        "cod_modelo": "#Control:cod_modelo/#Value",
+        "descripcion": "#Control:descripcion/#Value"
+    },
+    "Target": {
+        "EntitySet": "Maquina",
+        "Service": "/ReporteDiarioMDK/Services/ReporteDiarioMDK.service"
+    },
+    "ActionResult": {
+        "_Name": "create"
+    },
+    "_Type": "Action.Type.ODataService.CreateEntity"
+}

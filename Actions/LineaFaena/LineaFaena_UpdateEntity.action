@@ -1,0 +1,18 @@
+{
+    "_Type": "Action.Type.ODataService.UpdateEntity",
+    "Target": {
+        "EntitySet": "LineaFaena",
+        "Service": "/ReporteDiarioMDK/Services/ReporteDiarioMDK.service",
+        "ReadLink": "{@odata.readLink}"
+    },
+    "Properties": {
+        "codigo": "#Control:codigo/#Value",
+        "descripcion": "#Control:descripcion/#Value"
+    },
+    "UpdateLinks": [],
+    "ActionResult": {
+        "_Name": "update"
+    },
+    "OnSuccess": "/ReporteDiarioMDK/Actions/UpdateEntitySuccessMessage.action",
+    "OnFailure": "/ReporteDiarioMDK/Actions/UpdateEntityFailureMessage.action"
+}

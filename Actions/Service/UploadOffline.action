@@ -1,0 +1,9 @@
+{
+    "Service": "/ReporteDiarioMDK/Services/ReporteDiarioMDK.service",
+    "_Type": "Action.Type.OfflineOData.Upload",
+    "ActionResult": {
+        "_Name": "sync"
+    },
+    "OnSuccess": "/ReporteDiarioMDK/Actions/Service/DownloadStartedMessage.action",
+    "OnFailure": "/ReporteDiarioMDK/Actions/Service/SyncFailureMessage.action"
+}

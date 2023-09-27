@@ -1,0 +1,6 @@
+{
+    "ModalPageFullscreen": false,
+    "ModalPage": true,
+    "PageToOpen": "/ReporteDiarioMDK/Pages/LineaFaena/LineaFaena_Create.page",
+    "_Type": "Action.Type.Navigation"
+}

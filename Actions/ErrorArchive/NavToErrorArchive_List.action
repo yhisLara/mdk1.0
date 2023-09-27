@@ -1,0 +1,5 @@
+{
+    "_Type": "Action.Type.Navigation",
+    "PageToOpen": "/ReporteDiarioMDK/Pages/ErrorArchive/ErrorArchive_List.page",
+    "NavigationType": "Inner"
+}

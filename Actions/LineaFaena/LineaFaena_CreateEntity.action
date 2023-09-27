@@ -1,0 +1,17 @@
+{
+    "CreateLinks": [],
+    "OnFailure": "/ReporteDiarioMDK/Actions/CreateEntityFailureMessage.action",
+    "OnSuccess": "/ReporteDiarioMDK/Actions/CreateEntitySuccessMessage.action",
+    "Properties": {
+        "codigo": "#Control:codigo/#Value",
+        "descripcion": "#Control:descripcion/#Value"
+    },
+    "Target": {
+        "EntitySet": "LineaFaena",
+        "Service": "/ReporteDiarioMDK/Services/ReporteDiarioMDK.service"
+    },
+    "ActionResult": {
+        "_Name": "create"
+    },
+    "_Type": "Action.Type.ODataService.CreateEntity"
+}

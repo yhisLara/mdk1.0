@@ -1,0 +1,2 @@
+Pass:
+Generated bundle file /home/user/projects/ReporteDiarioMDK/.build/ReporteDiarioMDK/.build/uploadBundle.zip
