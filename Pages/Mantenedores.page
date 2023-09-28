@@ -1,0 +1,38 @@
+{
+	"Controls": [
+		{
+			"_Type": "Control.Type.BottomNavigation",
+			"_Name": "BottomNavigation0",
+			"Items": [
+				{
+					"_Type": "Control.Type.TabItem",
+					"Caption": "Linea Faneas",
+					"_Name": "TabItem0"
+				},
+				{
+					"_Type": "Control.Type.TabItem",
+					"Caption": "Maquinas",
+					"_Name": "TabItem1"
+				},
+				{
+					"_Type": "Control.Type.TabItem",
+					"Caption": "Parámetros",
+					"_Name": "TabItem2"
+				},
+				{
+					"_Type": "Control.Type.TabItem",
+					"Caption": "Predios",
+					"_Name": "TabItem3"
+				},
+				{
+					"_Type": "Control.Type.TabItem",
+					"Caption": "Tipo tiempos perdidos",
+					"_Name": "TabItem4"
+				}
+			]
+		}
+	],
+	"_Type": "Page",
+	"_Name": "Mantenedores",
+	"Caption": "Mantenedores"
+}

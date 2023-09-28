@@ -230,6 +230,9 @@ __webpack_require__.r(__webpack_exports__);
  * @param {IClientAPI} clientAPI
  */
 function OnWillUpdate(clientAPI) {
+  setInterval(function () {
+    clientAPI.executeAction('/ReporteDiarioMDK/Actions/Service/UploadOffline.action');
+  }, 6000);
   return clientAPI.executeAction('/ReporteDiarioMDK/Actions/OnWillUpdate.action').then(result => {
     if (result.data) {
       return clientAPI.executeAction('/ReporteDiarioMDK/Actions/Service/CloseOffline.action').then(success => Promise.resolve(success), failure => Promise.reject('Offline Odata Close Failed ' + failure));
@@ -612,6 +615,16 @@ module.exports = {"Controls":[{"_Type":"Control.Type.SectionedTable","_Name":"Se
 
 /***/ }),
 
+/***/ "./build.definitions/ReporteDiarioMDK/Pages/Inicial.page":
+/*!***************************************************************!*\
+  !*** ./build.definitions/ReporteDiarioMDK/Pages/Inicial.page ***!
+  \***************************************************************/
+/***/ ((module) => {
+
+module.exports = {"Controls":[{"Header":{"Headline":"Yhisleyn Lara","SubHeadline":"Administrador","Icon":"sap-icon://business-card","Alignment":"center","IconIsCircular":false,"DisableIconText":false},"Sections":[{"_Name":"ReporteDiario","Items":[{"Title":"Reporte diario","Image":"sap-icon://document-text","PageToOpen":"/ReporteDiarioMDK/Pages/Reporte_diario_Create.page","_Name":"SideDrawerSection0Item0","Visible":true,"TextAlignment":"left","Styles":{}}],"Caption":"Reporte diario","Visible":true,"PreserveImageSpacing":true,"SeparatorEnabled":true},{"_Name":"Mantenedores","Items":[{"Title":"Linea Faenas","Image":"sap-icon://workflow-tasks","OnPress":"/ReporteDiarioMDK/Actions/LineaFaena/NavToLineaFaena_List.action","PageToOpen":"/ReporteDiarioMDK/Pages/LineaFaena/LineaFaena_List.page","_Name":"MantenedoresLineaFaenas","Visible":true,"TextAlignment":"left","Styles":{}},{"Title":"Maquinas","Image":"sap-icon://machine","_Name":"MantenedoresMaquinas","Visible":true,"TextAlignment":"left","Styles":{}},{"Title":"Parámetros","Image":"sap-icon://action","_Name":"MantenedoresParametros","Visible":true,"TextAlignment":"left","Styles":{}},{"Title":"Predios","Image":"sap-icon://globe","_Name":"MantenedoresPredios","Visible":true,"TextAlignment":"left","Styles":{}},{"Title":"Tipo tiempos perdidos","Image":"sap-icon://away","_Name":"MantenedoresTiempoPerdido","Visible":true,"TextAlignment":"left","Styles":{}},{"Title":"Turnos","Image":"sap-icon://gantt-bars","_Name":"MantenedoresTurnos","Visible":true,"TextAlignment":"left","Styles":{}}],"Caption":"Mantenedores","Visible":true,"PreserveImageSpacing":true,"SeparatorEnabled":true}],"_Type":"Control.Type.SideDrawer","_Name":"SideDrawer0","AlwaysShowDrawerButton":false,"ClearHistory":false}],"_Type":"Page","_Name":"Inicial","Caption":"Inicial"}
+
+/***/ }),
+
 /***/ "./build.definitions/ReporteDiarioMDK/Pages/LineaFaena/LineaFaena_Create.page":
 /*!************************************************************************************!*\
   !*** ./build.definitions/ReporteDiarioMDK/Pages/LineaFaena/LineaFaena_Create.page ***!
@@ -658,7 +671,17 @@ module.exports = {"Caption":"LineaFaena","ActionBar":{"Items":[{"OnPress":"/Repo
   \************************************************************/
 /***/ ((module) => {
 
-module.exports = {"Caption":"Main","Controls":[{"_Name":"SectionedTable0","_Type":"Control.Type.SectionedTable","Sections":[{"Buttons":[{"OnPress":"/ReporteDiarioMDK/Actions/LineaFaena/NavToLineaFaena_List.action","Alignment":"Center","Title":"LineaFaena","ButtonType":"Text","Semantic":"Tint"},{"OnPress":"/ReporteDiarioMDK/Actions/Maquina/NavToMaquina_List.action","Alignment":"Center","Title":"Maquina","ButtonType":"Text","Semantic":"Tint"},{"OnPress":"/ReporteDiarioMDK/Actions/Parametro/NavToParametro_List.action","Alignment":"Center","Title":"Parametro","ButtonType":"Text","Semantic":"Tint"},{"OnPress":"/ReporteDiarioMDK/Actions/Predio/NavToPredio_List.action","Alignment":"Center","Title":"Predio","ButtonType":"Text","Semantic":"Tint"},{"OnPress":"/ReporteDiarioMDK/Actions/TipoTiempoPerdido/NavToTipoTiempoPerdido_List.action","Alignment":"Center","Title":"TipoTiempoPerdido","ButtonType":"Text","Semantic":"Tint"},{"OnPress":"/ReporteDiarioMDK/Actions/Turno/NavToTurno_List.action","Alignment":"Center","Title":"Turno","ButtonType":"Text","Semantic":"Tint"}],"_Name":"SectionButtonTable0","_Type":"Section.Type.ButtonTable"}]}],"_Name":"Main","_Type":"Page","ToolBar":{"Items":[{"_Name":"LogoutToolbarItem","_Type":"Control.Type.ToolbarItem","Caption":"Logout","OnPress":"/ReporteDiarioMDK/Actions/LogoutMessage.action"},{"_Name":"UploadToolbarItem","_Type":"Control.Type.ToolbarItem","Caption":"Sync","OnPress":"/ReporteDiarioMDK/Actions/Service/SyncStartedMessage.action","Visible":"$(PLT,true,true,false)"},{"_Name":"UpdateToolbarItem","_Type":"Control.Type.ToolbarItem","Caption":"Update","Enabled":true,"Clickable":true,"OnPress":"/ReporteDiarioMDK/Actions/AppUpdateProgressBanner.action","Visible":"$(PLT,true,true,false)"}]},"PrefersLargeCaption":true}
+module.exports = {"Controls":[{"_Type":"Control.Type.SectionedTable","_Name":"SectionedTable0","Sections":[{"Layout":{"LayoutType":"Vertical","HorizontalAlignment":"Leading"},"_Type":"Section.Type.ButtonTable","_Name":"SectionButtonTable0","EmptySection":{"FooterVisible":false},"Buttons":[{"_Name":"SectionButton0","Title":"LineaFaena","Alignment":"Center","ButtonType":"Text","Semantic":"Tint","ImagePosition":"Leading","OnPress":"/ReporteDiarioMDK/Actions/LineaFaena/NavToLineaFaena_List.action"},{"_Name":"SectionButton1","Title":"Maquina","Alignment":"Center","ButtonType":"Text","Semantic":"Tint","ImagePosition":"Leading","OnPress":"/ReporteDiarioMDK/Actions/Maquina/NavToMaquina_List.action"},{"_Name":"SectionButton2","Title":"Parametro","Alignment":"Center","ButtonType":"Text","Semantic":"Tint","ImagePosition":"Leading","OnPress":"/ReporteDiarioMDK/Actions/Parametro/NavToParametro_List.action"},{"_Name":"SectionButton3","Title":"Predio","Alignment":"Center","ButtonType":"Text","Semantic":"Tint","ImagePosition":"Leading","OnPress":"/ReporteDiarioMDK/Actions/Predio/NavToPredio_List.action"},{"_Name":"SectionButton4","Title":"TipoTiempoPerdido","Alignment":"Center","ButtonType":"Text","Semantic":"Tint","ImagePosition":"Leading","OnPress":"/ReporteDiarioMDK/Actions/TipoTiempoPerdido/NavToTipoTiempoPerdido_List.action"},{"_Name":"SectionButton5","Title":"Turno","Alignment":"Center","ButtonType":"Text","Semantic":"Tint","ImagePosition":"Leading","OnPress":"/ReporteDiarioMDK/Actions/Turno/NavToTurno_List.action"}]}]}],"_Type":"Page","_Name":"Main","Caption":"Mantenedores","PrefersLargeCaption":true,"ToolBar":{"Items":[{"_Type":"Control.Type.ToolbarItem","_Name":"LogoutToolbarItem","Caption":"Logout","Enabled":true,"Visible":true,"Clickable":true,"OnPress":"/ReporteDiarioMDK/Actions/LogoutMessage.action"},{"_Type":"Control.Type.ToolbarItem","_Name":"UploadToolbarItem","Caption":"Sync","Enabled":true,"Visible":"$(PLT,true,true,false)","Clickable":true,"OnPress":"/ReporteDiarioMDK/Actions/Service/SyncStartedMessage.action"},{"_Type":"Control.Type.ToolbarItem","_Name":"UpdateToolbarItem","Caption":"Update","Enabled":true,"Visible":"$(PLT,true,true,false)","Clickable":true,"OnPress":"/ReporteDiarioMDK/Actions/AppUpdateProgressBanner.action"}]}}
+
+/***/ }),
+
+/***/ "./build.definitions/ReporteDiarioMDK/Pages/Mantenedores.page":
+/*!********************************************************************!*\
+  !*** ./build.definitions/ReporteDiarioMDK/Pages/Mantenedores.page ***!
+  \********************************************************************/
+/***/ ((module) => {
+
+module.exports = {"Controls":[{"_Type":"Control.Type.BottomNavigation","_Name":"BottomNavigation0","Items":[{"_Type":"Control.Type.TabItem","Caption":"Linea Faneas","_Name":"TabItem0"},{"_Type":"Control.Type.TabItem","Caption":"Maquinas","_Name":"TabItem1"},{"_Type":"Control.Type.TabItem","Caption":"Parámetros","_Name":"TabItem2"},{"_Type":"Control.Type.TabItem","Caption":"Predios","_Name":"TabItem3"},{"_Type":"Control.Type.TabItem","Caption":"Tipo tiempos perdidos","_Name":"TabItem4"}]}],"_Type":"Page","_Name":"Mantenedores","Caption":"Mantenedores"}
 
 /***/ }),
 
@@ -782,6 +805,16 @@ module.exports = {"Caption":"Predio","ActionBar":{"Items":[{"OnPress":"/ReporteD
 
 /***/ }),
 
+/***/ "./build.definitions/ReporteDiarioMDK/Pages/Reporte_diario_Create.page":
+/*!*****************************************************************************!*\
+  !*** ./build.definitions/ReporteDiarioMDK/Pages/Reporte_diario_Create.page ***!
+  \*****************************************************************************/
+/***/ ((module) => {
+
+module.exports = {"_Type":"Page","_Name":"Reporte_diario_Create","Controls":[{"StartColumn":{"_Name":"StartColumn"},"_Name":"FlexibleColumnLayout0","_Type":"Control.Type.FlexibleColumnLayout"}],"Caption":"Reporte_diario_Create"}
+
+/***/ }),
+
 /***/ "./build.definitions/ReporteDiarioMDK/Pages/TipoTiempoPerdido/TipoTiempoPerdido_Create.page":
 /*!**************************************************************************************************!*\
   !*** ./build.definitions/ReporteDiarioMDK/Pages/TipoTiempoPerdido/TipoTiempoPerdido_Create.page ***!
@@ -868,7 +901,7 @@ module.exports = {"Caption":"Turno","ActionBar":{"Items":[{"OnPress":"/ReporteDi
   \*******************************************/
 /***/ ((module) => {
 
-module.exports = {"_Name":"ReporteDiarioMDK","Version":"/ReporteDiarioMDK/Globals/AppDefinition_Version.global","MainPage":"/ReporteDiarioMDK/Pages/Main.page","OnLaunch":["/ReporteDiarioMDK/Actions/Service/InitializeOffline.action"],"OnWillUpdate":"/ReporteDiarioMDK/Rules/OnWillUpdate.js","OnDidUpdate":"/ReporteDiarioMDK/Actions/Service/InitializeOffline.action","Styles":"/ReporteDiarioMDK/Styles/Styles.less","Localization":"/ReporteDiarioMDK/i18n/i18n.properties","_SchemaVersion":"23.8","StyleSheets":{"Styles":{"css":"/ReporteDiarioMDK/Styles/Styles.css","ios":"/ReporteDiarioMDK/Styles/Styles.nss","android":"/ReporteDiarioMDK/Styles/Styles.json"}}}
+module.exports = {"MainPage":"/ReporteDiarioMDK/Pages/Inicial.page","OnLaunch":["/ReporteDiarioMDK/Actions/Service/InitializeOffline.action"],"OnWillUpdate":"/ReporteDiarioMDK/Rules/OnWillUpdate.js","OnDidUpdate":"/ReporteDiarioMDK/Actions/Service/InitializeOffline.action","Styles":"/ReporteDiarioMDK/Styles/Styles.less","Version":"/ReporteDiarioMDK/Globals/AppDefinition_Version.global","Localization":"/ReporteDiarioMDK/i18n/i18n.properties","_SchemaVersion":"23.8","_Name":"ReporteDiarioMDK","StyleSheets":{"Styles":{"css":"/ReporteDiarioMDK/Styles/Styles.css","ios":"/ReporteDiarioMDK/Styles/Styles.nss","android":"/ReporteDiarioMDK/Styles/Styles.json"}}}
 
 /***/ }),
 
@@ -1628,7 +1661,7 @@ module.exports = {"Value":"1.0.0","_Type":"String"}
   \******************************************************************************/
 /***/ ((module) => {
 
-module.exports = {"DestinationName":"ReporteDiarioMDK","PathSuffix":"/Mantenedor","OfflineEnabled":true,"OfflineOptions":{"StoreParameters":{"StoreName":"CIO"}},"SourceType":"Mobile"}
+module.exports = {"DestinationName":"ReporteDiarioMDK","PathSuffix":"/Mantenedor","OfflineEnabled":false,"SourceType":"Mobile","RestService":true}
 
 /***/ }),
 
@@ -1718,11 +1751,13 @@ let reportediariomdk_i18n_i18n_properties = __webpack_require__(/*! ./ReporteDia
 let reportediariomdk_jsconfig_json = __webpack_require__(/*! ./ReporteDiarioMDK/jsconfig.json */ "./build.definitions/ReporteDiarioMDK/jsconfig.json")
 let reportediariomdk_pages_errorarchive_errorarchive_detail_page = __webpack_require__(/*! ./ReporteDiarioMDK/Pages/ErrorArchive/ErrorArchive_Detail.page */ "./build.definitions/ReporteDiarioMDK/Pages/ErrorArchive/ErrorArchive_Detail.page")
 let reportediariomdk_pages_errorarchive_errorarchive_list_page = __webpack_require__(/*! ./ReporteDiarioMDK/Pages/ErrorArchive/ErrorArchive_List.page */ "./build.definitions/ReporteDiarioMDK/Pages/ErrorArchive/ErrorArchive_List.page")
+let reportediariomdk_pages_inicial_page = __webpack_require__(/*! ./ReporteDiarioMDK/Pages/Inicial.page */ "./build.definitions/ReporteDiarioMDK/Pages/Inicial.page")
 let reportediariomdk_pages_lineafaena_lineafaena_create_page = __webpack_require__(/*! ./ReporteDiarioMDK/Pages/LineaFaena/LineaFaena_Create.page */ "./build.definitions/ReporteDiarioMDK/Pages/LineaFaena/LineaFaena_Create.page")
 let reportediariomdk_pages_lineafaena_lineafaena_detail_page = __webpack_require__(/*! ./ReporteDiarioMDK/Pages/LineaFaena/LineaFaena_Detail.page */ "./build.definitions/ReporteDiarioMDK/Pages/LineaFaena/LineaFaena_Detail.page")
 let reportediariomdk_pages_lineafaena_lineafaena_edit_page = __webpack_require__(/*! ./ReporteDiarioMDK/Pages/LineaFaena/LineaFaena_Edit.page */ "./build.definitions/ReporteDiarioMDK/Pages/LineaFaena/LineaFaena_Edit.page")
 let reportediariomdk_pages_lineafaena_lineafaena_list_page = __webpack_require__(/*! ./ReporteDiarioMDK/Pages/LineaFaena/LineaFaena_List.page */ "./build.definitions/ReporteDiarioMDK/Pages/LineaFaena/LineaFaena_List.page")
 let reportediariomdk_pages_main_page = __webpack_require__(/*! ./ReporteDiarioMDK/Pages/Main.page */ "./build.definitions/ReporteDiarioMDK/Pages/Main.page")
+let reportediariomdk_pages_mantenedores_page = __webpack_require__(/*! ./ReporteDiarioMDK/Pages/Mantenedores.page */ "./build.definitions/ReporteDiarioMDK/Pages/Mantenedores.page")
 let reportediariomdk_pages_maquina_maquina_create_page = __webpack_require__(/*! ./ReporteDiarioMDK/Pages/Maquina/Maquina_Create.page */ "./build.definitions/ReporteDiarioMDK/Pages/Maquina/Maquina_Create.page")
 let reportediariomdk_pages_maquina_maquina_detail_page = __webpack_require__(/*! ./ReporteDiarioMDK/Pages/Maquina/Maquina_Detail.page */ "./build.definitions/ReporteDiarioMDK/Pages/Maquina/Maquina_Detail.page")
 let reportediariomdk_pages_maquina_maquina_edit_page = __webpack_require__(/*! ./ReporteDiarioMDK/Pages/Maquina/Maquina_Edit.page */ "./build.definitions/ReporteDiarioMDK/Pages/Maquina/Maquina_Edit.page")
@@ -1735,6 +1770,7 @@ let reportediariomdk_pages_predio_predio_create_page = __webpack_require__(/*! .
 let reportediariomdk_pages_predio_predio_detail_page = __webpack_require__(/*! ./ReporteDiarioMDK/Pages/Predio/Predio_Detail.page */ "./build.definitions/ReporteDiarioMDK/Pages/Predio/Predio_Detail.page")
 let reportediariomdk_pages_predio_predio_edit_page = __webpack_require__(/*! ./ReporteDiarioMDK/Pages/Predio/Predio_Edit.page */ "./build.definitions/ReporteDiarioMDK/Pages/Predio/Predio_Edit.page")
 let reportediariomdk_pages_predio_predio_list_page = __webpack_require__(/*! ./ReporteDiarioMDK/Pages/Predio/Predio_List.page */ "./build.definitions/ReporteDiarioMDK/Pages/Predio/Predio_List.page")
+let reportediariomdk_pages_reporte_diario_create_page = __webpack_require__(/*! ./ReporteDiarioMDK/Pages/Reporte_diario_Create.page */ "./build.definitions/ReporteDiarioMDK/Pages/Reporte_diario_Create.page")
 let reportediariomdk_pages_tipotiempoperdido_tipotiempoperdido_create_page = __webpack_require__(/*! ./ReporteDiarioMDK/Pages/TipoTiempoPerdido/TipoTiempoPerdido_Create.page */ "./build.definitions/ReporteDiarioMDK/Pages/TipoTiempoPerdido/TipoTiempoPerdido_Create.page")
 let reportediariomdk_pages_tipotiempoperdido_tipotiempoperdido_detail_page = __webpack_require__(/*! ./ReporteDiarioMDK/Pages/TipoTiempoPerdido/TipoTiempoPerdido_Detail.page */ "./build.definitions/ReporteDiarioMDK/Pages/TipoTiempoPerdido/TipoTiempoPerdido_Detail.page")
 let reportediariomdk_pages_tipotiempoperdido_tipotiempoperdido_edit_page = __webpack_require__(/*! ./ReporteDiarioMDK/Pages/TipoTiempoPerdido/TipoTiempoPerdido_Edit.page */ "./build.definitions/ReporteDiarioMDK/Pages/TipoTiempoPerdido/TipoTiempoPerdido_Edit.page")
@@ -1843,11 +1879,13 @@ module.exports = {
 	reportediariomdk_jsconfig_json : reportediariomdk_jsconfig_json,
 	reportediariomdk_pages_errorarchive_errorarchive_detail_page : reportediariomdk_pages_errorarchive_errorarchive_detail_page,
 	reportediariomdk_pages_errorarchive_errorarchive_list_page : reportediariomdk_pages_errorarchive_errorarchive_list_page,
+	reportediariomdk_pages_inicial_page : reportediariomdk_pages_inicial_page,
 	reportediariomdk_pages_lineafaena_lineafaena_create_page : reportediariomdk_pages_lineafaena_lineafaena_create_page,
 	reportediariomdk_pages_lineafaena_lineafaena_detail_page : reportediariomdk_pages_lineafaena_lineafaena_detail_page,
 	reportediariomdk_pages_lineafaena_lineafaena_edit_page : reportediariomdk_pages_lineafaena_lineafaena_edit_page,
 	reportediariomdk_pages_lineafaena_lineafaena_list_page : reportediariomdk_pages_lineafaena_lineafaena_list_page,
 	reportediariomdk_pages_main_page : reportediariomdk_pages_main_page,
+	reportediariomdk_pages_mantenedores_page : reportediariomdk_pages_mantenedores_page,
 	reportediariomdk_pages_maquina_maquina_create_page : reportediariomdk_pages_maquina_maquina_create_page,
 	reportediariomdk_pages_maquina_maquina_detail_page : reportediariomdk_pages_maquina_maquina_detail_page,
 	reportediariomdk_pages_maquina_maquina_edit_page : reportediariomdk_pages_maquina_maquina_edit_page,
@@ -1860,6 +1898,7 @@ module.exports = {
 	reportediariomdk_pages_predio_predio_detail_page : reportediariomdk_pages_predio_predio_detail_page,
 	reportediariomdk_pages_predio_predio_edit_page : reportediariomdk_pages_predio_predio_edit_page,
 	reportediariomdk_pages_predio_predio_list_page : reportediariomdk_pages_predio_predio_list_page,
+	reportediariomdk_pages_reporte_diario_create_page : reportediariomdk_pages_reporte_diario_create_page,
 	reportediariomdk_pages_tipotiempoperdido_tipotiempoperdido_create_page : reportediariomdk_pages_tipotiempoperdido_tipotiempoperdido_create_page,
 	reportediariomdk_pages_tipotiempoperdido_tipotiempoperdido_detail_page : reportediariomdk_pages_tipotiempoperdido_tipotiempoperdido_detail_page,
 	reportediariomdk_pages_tipotiempoperdido_tipotiempoperdido_edit_page : reportediariomdk_pages_tipotiempoperdido_tipotiempoperdido_edit_page,

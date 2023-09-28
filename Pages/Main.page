@@ -1,88 +1,112 @@
 {
-	"Caption": "Main",
 	"Controls": [
 		{
-			"_Name": "SectionedTable0",
 			"_Type": "Control.Type.SectionedTable",
+			"_Name": "SectionedTable0",
 			"Sections": [
 				{
+					"Layout": {
+						"LayoutType": "Vertical",
+						"HorizontalAlignment": "Leading"
+					},
+					"_Type": "Section.Type.ButtonTable",
+					"_Name": "SectionButtonTable0",
+					"EmptySection": {
+						"FooterVisible": false
+					},
 					"Buttons": [
 						{
-							"OnPress": "/ReporteDiarioMDK/Actions/LineaFaena/NavToLineaFaena_List.action",
-							"Alignment": "Center",
+							"_Name": "SectionButton0",
 							"Title": "LineaFaena",
+							"Alignment": "Center",
 							"ButtonType": "Text",
-							"Semantic": "Tint"
+							"Semantic": "Tint",
+							"ImagePosition": "Leading",
+							"OnPress": "/ReporteDiarioMDK/Actions/LineaFaena/NavToLineaFaena_List.action"
 						},
 						{
-							"OnPress": "/ReporteDiarioMDK/Actions/Maquina/NavToMaquina_List.action",
-							"Alignment": "Center",
+							"_Name": "SectionButton1",
 							"Title": "Maquina",
+							"Alignment": "Center",
 							"ButtonType": "Text",
-							"Semantic": "Tint"
+							"Semantic": "Tint",
+							"ImagePosition": "Leading",
+							"OnPress": "/ReporteDiarioMDK/Actions/Maquina/NavToMaquina_List.action"
 						},
 						{
-							"OnPress": "/ReporteDiarioMDK/Actions/Parametro/NavToParametro_List.action",
-							"Alignment": "Center",
+							"_Name": "SectionButton2",
 							"Title": "Parametro",
+							"Alignment": "Center",
 							"ButtonType": "Text",
-							"Semantic": "Tint"
+							"Semantic": "Tint",
+							"ImagePosition": "Leading",
+							"OnPress": "/ReporteDiarioMDK/Actions/Parametro/NavToParametro_List.action"
 						},
 						{
-							"OnPress": "/ReporteDiarioMDK/Actions/Predio/NavToPredio_List.action",
-							"Alignment": "Center",
+							"_Name": "SectionButton3",
 							"Title": "Predio",
+							"Alignment": "Center",
 							"ButtonType": "Text",
-							"Semantic": "Tint"
+							"Semantic": "Tint",
+							"ImagePosition": "Leading",
+							"OnPress": "/ReporteDiarioMDK/Actions/Predio/NavToPredio_List.action"
 						},
 						{
-							"OnPress": "/ReporteDiarioMDK/Actions/TipoTiempoPerdido/NavToTipoTiempoPerdido_List.action",
-							"Alignment": "Center",
+							"_Name": "SectionButton4",
 							"Title": "TipoTiempoPerdido",
+							"Alignment": "Center",
 							"ButtonType": "Text",
-							"Semantic": "Tint"
+							"Semantic": "Tint",
+							"ImagePosition": "Leading",
+							"OnPress": "/ReporteDiarioMDK/Actions/TipoTiempoPerdido/NavToTipoTiempoPerdido_List.action"
 						},
 						{
-							"OnPress": "/ReporteDiarioMDK/Actions/Turno/NavToTurno_List.action",
-							"Alignment": "Center",
+							"_Name": "SectionButton5",
 							"Title": "Turno",
+							"Alignment": "Center",
 							"ButtonType": "Text",
-							"Semantic": "Tint"
+							"Semantic": "Tint",
+							"ImagePosition": "Leading",
+							"OnPress": "/ReporteDiarioMDK/Actions/Turno/NavToTurno_List.action"
 						}
-					],
-					"_Name": "SectionButtonTable0",
-					"_Type": "Section.Type.ButtonTable"
+					]
 				}
 			]
 		}
 	],
-	"_Name": "Main",
 	"_Type": "Page",
+	"_Name": "Main",
+	"Caption": "Mantenedores",
+	"PrefersLargeCaption": true,
 	"ToolBar": {
 		"Items": [
 			{
-				"_Name": "LogoutToolbarItem",
 				"_Type": "Control.Type.ToolbarItem",
+				"_Name": "LogoutToolbarItem",
 				"Caption": "Logout",
+				"Enabled": true,
+				"Visible": true,
+				"Clickable": true,
 				"OnPress": "/ReporteDiarioMDK/Actions/LogoutMessage.action"
 			},
 			{
-				"_Name": "UploadToolbarItem",
 				"_Type": "Control.Type.ToolbarItem",
+				"_Name": "UploadToolbarItem",
 				"Caption": "Sync",
-				"OnPress": "/ReporteDiarioMDK/Actions/Service/SyncStartedMessage.action",
-				"Visible": "$(PLT,true,true,false)"
+				"Enabled": true,
+				"Visible": "$(PLT,true,true,false)",
+				"Clickable": true,
+				"OnPress": "/ReporteDiarioMDK/Actions/Service/SyncStartedMessage.action"
 			},
 			{
-				"_Name": "UpdateToolbarItem",
 				"_Type": "Control.Type.ToolbarItem",
+				"_Name": "UpdateToolbarItem",
 				"Caption": "Update",
 				"Enabled": true,
+				"Visible": "$(PLT,true,true,false)",
 				"Clickable": true,
-				"OnPress": "/ReporteDiarioMDK/Actions/AppUpdateProgressBanner.action",
-				"Visible": "$(PLT,true,true,false)"
+				"OnPress": "/ReporteDiarioMDK/Actions/AppUpdateProgressBanner.action"
 			}
 		]
-	},
-	"PrefersLargeCaption": true
+	}
 }
