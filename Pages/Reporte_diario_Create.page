@@ -1,0 +1,14 @@
+{
+	"_Type": "Page",
+	"_Name": "Reporte_diario_Create",
+	"Controls": [
+		{
+			"StartColumn": {
+				"_Name": "StartColumn"
+			},
+			"_Name": "FlexibleColumnLayout0",
+			"_Type": "Control.Type.FlexibleColumnLayout"
+		}
+	],
+	"Caption": "Reporte_diario_Create"
+}

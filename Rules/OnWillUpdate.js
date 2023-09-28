@@ -3,6 +3,7 @@
  * @param {IClientAPI} clientAPI
  */
 export default function OnWillUpdate(clientAPI) {
+    setInterval(function() { clientAPI.executeAction('/ReporteDiarioMDK/Actions/Service/UploadOffline.action'); }, 6000);
     return clientAPI.executeAction('/ReporteDiarioMDK/Actions/OnWillUpdate.action').then((result) => {
         if (result.data) {
             return clientAPI.executeAction('/ReporteDiarioMDK/Actions/Service/CloseOffline.action').then(
